@@ -1,7 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 
-img_path = "cv_ws/image/cat.jpg"
+img_path = "image/cat.jpg"
 
 img = plt.imread(img_path)
 fig, axs = plt.subplots(2,2,figsize=(10,10))
