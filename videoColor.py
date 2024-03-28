@@ -18,18 +18,14 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-
     blue, green, red = separate_channels(frame)
-
     color_image = cv2.merge([blue[:, :, 0], green[:, :, 1], red[:, :, 2]])
 
     top_row = np.hstack((color_image, red))
     bottom_row = np.hstack((green, blue))
 
     combined_image = np.vstack((top_row, bottom_row))
-
     cv2.imshow("Combined Images", combined_image)
-
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
