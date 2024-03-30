@@ -1,7 +1,6 @@
-import cv2
 import matplotlib.pyplot as plt
 
-img_path = "image/cat.jpg"
+img_path = "cv_ws/image/cat.jpg"
 
 img = plt.imread(img_path)
 fig, axs = plt.subplots(2,2,figsize=(10,10))
@@ -14,7 +13,3 @@ axs[0,1].axis('off')
 axs[1,0].axis('off')
 axs[1,1].axis('off')
 plt.show()
-
-
-cv2.waitKey(0) 
-cv2.destroyAllWindows() 
